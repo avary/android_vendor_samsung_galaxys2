@@ -15,14 +15,16 @@
 # Prebuilt libraries that are needed to build open-source libraries
 PRODUCT_COPY_FILES := \
     vendor/samsung/galaxys2/proprietary/ril/lib/libril.so:obj/lib/libril.so \
-    vendor/samsung/galaxys2/proprietary/ril/lib/libsecril-client.so:obj/lib/libsecril-client.so
+    vendor/samsung/galaxys2/proprietary/ril/lib/libsecril-client.so:obj/lib/libsecril-client.so \
+    vendor/samsung/galaxys2/proprietary/audio/libaudio.so:obj/lib/libaudio.so
 
 # RIL
 PRODUCT_COPY_FILES += \
     vendor/samsung/galaxys2/proprietary/ril/bin/rild:system/bin/rild \
     vendor/samsung/galaxys2/proprietary/ril/lib/libril.so:system/lib/libril.so \
     vendor/samsung/galaxys2/proprietary/ril/lib/libsec-ril.so:system/lib/libsec-ril.so \
-    vendor/samsung/galaxys2/proprietary/ril/lib/libsecril-client.so:system/lib/libsecril-client.so
+    vendor/samsung/galaxys2/proprietary/ril/lib/libsecril-client.so:system/lib/libsecril-client.so \
+    vendor/samsung/galaxys2/proprietary/audio/libaudio.so:system/lib/libaudio.so
 
 # EGL
 PRODUCT_COPY_FILES += \
@@ -78,9 +80,15 @@ PRODUCT_COPY_FILES += \
 
 # GPS
 PRODUCT_COPY_FILES += \
-    vendor/samsung/galaxys2/proprietary/gps/lib/hw/gps.GT-I9100.so:system/lib/hw/gps.GT-I9100.so
+    vendor/samsung/galaxys2/proprietary/gps/lib/hw/vendor-gps.smdkv310.so:system/lib/hw/vendor-gps.smdkv310.so
 
 # WIFI
 PRODUCT_COPY_FILES += \
-    vendor/samsung/galaxys2/proprietary/wifi/bin/BCM4330B1_002.001.003.0221.0265.hcd:system/bin/BCM4330B1_002.001.003.0221.0265.hcd
+    vendor/samsung/galaxys2/proprietary/wifi/bin/BCM4330B1_002.001.003.0221.0265.hcd:system/bin/BCM4330B1_002.001.003.0221.0265.hcd \
+    vendor/samsung/galaxys2/proprietary/wifi/vendor/firmware/bcm4330_aps.bin:system/vendor/firmware/bcm4330_aps.bin \
+    vendor/samsung/galaxys2/proprietary/wifi/vendor/firmware/bcm4330_mfg.bin:system/vendor/firmware/bcm4330_mfg.bin \
+    vendor/samsung/galaxys2/proprietary/wifi/vendor/firmware/bcm4330_sta.bin:system/vendor/firmware/bcm4330_sta.bin \
+    vendor/samsung/galaxys2/proprietary/wifi/vendor/firmware/fw_bcm4330.bin:system/vendor/firmware/fw_bcm4330.bin \
+    vendor/samsung/galaxys2/proprietary/wifi/vendor/firmware/fw_bcm4330_apsta.bin:system/vendor/firmware/fw_bcm4330_apsta.bin \
+    vendor/samsung/galaxys2/proprietary/wifi/vendor/firmware/fw_bcm4330_p2p.bin:system/vendor/firmware/fw_bcm4330_p2p.bin
 
